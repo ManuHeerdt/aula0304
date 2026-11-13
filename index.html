@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agente com memória</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Barra Lateral -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-topo">
+      <button id="nova" type="button">
+        <span>✏️</span> Nova conversa
+      </button>
+      <button id="toggle-sidebar" type="button" title="Recolher barra lateral">☰</button>
+    </div>
+
+    <div class="sidebar-titulo">Todas as conversas</div>
+    <nav id="lista-conversas" class="lista-conversas"></nav>
+  </aside>
+
+  <!-- Área Principal do Chat -->
+  <main class="principal">
+    <header>
+      <div class="header-esquerda">
+        <button id="abrir-sidebar" type="button" title="Abrir barra lateral">☰</button>
+        <h1>Agente com memória</h1>
+      </div>
+    </header>
+
+    <div id="chat" aria-live="polite"></div>
+
+    <div class="rodape">
+      <form id="form">
+        <input id="pergunta" aria-label="Sua mensagem" placeholder="Envie uma mensagem..." autocomplete="off" required>
+        <button id="enviar" type="submit" aria-label="Enviar">↑</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
